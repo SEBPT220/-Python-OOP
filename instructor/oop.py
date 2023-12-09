@@ -40,8 +40,12 @@ class Parent():
     print('-------')
     print("Parent initialized:", self)
     print('-------')
+
   def hello(self):
     print(f"Hey, I'm {self.first_name} {self.last_name}. Welcome to the Dragonfly!")
+
+  def __str__(self):
+    return f"{self.first_name} {self.last_name} hahahahahahah"
 
 class Child(Parent):
   def __init__(self):
@@ -50,6 +54,9 @@ class Child(Parent):
     print('-------')
     print("Child initialized:", self)
     print('-------')
+
+  def hello(self):
+    print(f"Hey, I'm  OVERLOADED")
 
 mom = Parent()
 print('*******************************************')
@@ -63,5 +70,6 @@ daughter.hello()
 print('*******************************************')
 print(daughter.last_name)
 
-
 print('*******************************************')
+
+print(mom)
